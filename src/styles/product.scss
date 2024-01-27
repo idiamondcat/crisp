@@ -1,0 +1,330 @@
+.product_page {
+  margin: 10px auto;
+  transition: all 0.5s;
+}
+
+.product_page__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  & > * {
+    flex: 0 1 45%;
+  }
+  @media (max-width: 700px) {
+    flex-direction: column;
+    & > * {
+      flex: 0 1 100%;
+    }
+  }
+}
+
+.product_page__breadcrumbs {
+  margin: 10px auto;
+  & .breadcrumbs__item--active {
+    text-transform: lowercase;
+  }
+}
+
+.product_page__imgs {
+  margin: 0 auto;
+  padding: 15px;
+  height: 500px;
+  max-width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  grid-area: imgs;
+}
+
+.product_page__brand {
+  margin-bottom: 10px;
+  .value {
+    background-color: rgb(231, 225, 219);
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: "Oswald", sans-serif;
+  }
+}
+
+.product_page__name {
+  margin-bottom: 25px;
+  color: #000;
+  font-family: "Oswald", sans-serif;
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 116%;
+  text-align: start;
+}
+
+.product_page__color {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+
+  .product_item__value {
+    border: 1px solid black;
+    padding: 5px;
+  }
+}
+
+.product_page__sizes {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+
+  .sizes {
+    padding: 0;
+    .sizes__item {
+      list-style: none;
+      padding: 5px;
+      color: #828282;
+      border: 1px solid #828282;
+      cursor: pointer;
+      &:hover {
+        background-color: rgb(231, 225, 219);
+      }
+      &.active {
+        border: 1px solid black;
+        color: #000;
+        cursor: auto;
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+  .product_page__items {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+.product_page__control_wrap {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.product_page__quantity {
+  & > * {
+    margin-bottom: 10px;
+  }
+}
+
+.product_quantity {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 119px;
+  min-width: max-content;
+  border: 1px solid #c4c4c4;
+  background: #fff;
+  box-sizing: border-box;
+  flex: 1 0 50%;
+  @media (max-width: 580px) {
+    flex: 1 0 100%;
+  }
+  .load_ico {
+    display: none;
+  }
+
+  &.loading {
+    pointer-events: none;
+  }
+
+  &.loading .load_ico {
+    max-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 35px;
+    right: 35px;
+    background-color: #ffffff;
+    svg {
+      width: 20px;
+      @keyframes rotate {
+        0% {
+          transform: rotate(0);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      animation: rotate linear 1.5s infinite;
+    }
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    display: none;
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
+
+  button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 0px;
+    height: 32px;
+  }
+
+  & > * {
+    padding: 5px;
+    text-align: center;
+    min-width: 30px;
+  }
+
+  .product_quantity__num {
+    opacity: 1;
+    border: none;
+    &.loading {
+      position: relative;
+      background-color: red;
+      &::after {
+        content: "";
+        min-width: 200px;
+        min-height: 200px;
+        display: block;
+        width: 130px;
+        height: 130px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: red;
+        color: red;
+        z-index: 3333;
+      }
+    }
+  }
+  .product_quantity__minus,
+  .product_quantity__plus {
+    cursor: pointer;
+    &.unactive {
+      cursor: auto;
+      pointer-events: none;
+    }
+    &:hover {
+      background-color: rgb(231, 225, 219);
+    }
+    &:active {
+      transform: scale(0.9);
+      transition: all 0.5s;
+    }
+  }
+}
+
+.product_page__prise {
+  .sizes {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+    .product_page__prise {
+      & ~ .product_page__sale_prise {
+        display: none;
+      }
+      &.sale {
+        text-decoration: line-through;
+      }
+      &.sale ~ .product_page__sale_prise {
+        display: block;
+        color: red;
+      }
+    }
+  }
+}
+
+.product_page__btn {
+  margin: 10px 0;
+  width: 221px;
+  height: 50px;
+  font-family: "Oswald", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.loading,
+  &.remove.loading {
+    pointer-events: none;
+    cursor: none;
+    background-color: #828282;
+    &::after {
+      content: "...";
+    }
+  }
+
+  &::after {
+    content: "add to cart";
+    color: #fff;
+    left: 50%;
+  }
+
+  &.remove {
+    &::after {
+      content: "remove from cart";
+      color: #fff;
+      left: 50%;
+    }
+  }
+}
+
+.product_description__addition {
+  background: #f8f9fb;
+  max-width: 100%;
+  flex: 1 0 90%;
+  font-family: "Oswald";
+  line-height: 178%;
+  padding: 10px;
+  margin: 0 auto 10px;
+  font-weight: 100;
+  font-size: 14px;
+}
+
+.product_description__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  font-family: "Oswald", sans-serif;
+  border-bottom: #c4c4c4 solid 1px;
+  font-size: 24px;
+}
+
+.product_detail__sku {
+  display: flex;
+  gap: 10px;
+}

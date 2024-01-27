@@ -1,0 +1,263 @@
+header {
+  background-color: #000;
+  min-height: 115px;
+  color: white;
+  min-width: 100%;
+  margin: 0 auto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: space-between;
+  min-height: 115px;
+  max-width: 1920px;
+  padding: 0px 21px;
+  margin: 0px auto;
+  box-sizing: border-box;
+  width: 100%;
+  color: #ffffff;
+  position: relative;
+}
+
+.logo {
+  width: 86px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    display: block;
+  }
+}
+
+.burger {
+  width: 45px;
+  height: 40px;
+  margin-right: 5px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  display: none;
+
+  & span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+  }
+  & span:nth-child(1) {
+    top: 0px;
+  }
+  & span:nth-child(2),
+  & span:nth-child(3) {
+    top: 18px;
+  }
+  & span:nth-child(4) {
+    top: 36px;
+  }
+  &.open span:nth-child(1) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+  }
+  &.open span:nth-child(2) {
+    transform: rotate(45deg);
+  }
+  &.open span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+  &.open span:nth-child(4) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+  }
+}
+
+.pages {
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.pages,
+.account {
+  display: flex;
+  align-items: center;
+  gap: 29px;
+}
+
+.account a {
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.account__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  &:hover {
+    color: $color5;
+  }
+  &.sigh,
+  &.sigh-out {
+    column-gap: 5px;
+    & .account__item-text {
+      font: {
+        family: "Oswald", Arial, sans-serif;
+        size: 14px;
+        weight: 600;
+      }
+      color: #ffffff;
+    }
+  }
+}
+
+.sigh-in .out {
+  display: none;
+}
+.sigh-in .in {
+  display: block;
+}
+.sigh-out .in {
+  display: none;
+}
+.sigh-out .out {
+  display: block;
+}
+
+.pages__item {
+  text-transform: uppercase;
+  list-style: none;
+  white-space: nowrap;
+  color: #ffffff;
+  border-bottom: transparent solid 2px;
+  &:hover {
+    border-bottom: $color5 solid 2px;
+  }
+}
+
+.shoping_cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+}
+
+#shoping_cart__ind {
+  &.active {
+    opacity: 1;
+  }
+
+  color: #ffffff;
+  padding: 3px;
+  border: 1px solid #b60f0f;
+  background-color: #b60f0f;
+  border-radius: 10px;
+  font-size: 50%;
+  position: absolute;
+  right: -1em;
+  top: -25%;
+  display: inline-block;
+  opacity: 0;
+}
+
+.shoping_cart__aditional {
+  display: flex;
+  flex-direction: column;
+}
+
+.shoping_cart__ico {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 18px;
+    height: 22px;
+    max-width: 100%;
+  }
+}
+
+.shoping_cart__mini {
+  display: none;
+}
+
+@media (max-width: 670px) {
+  .burger {
+    display: block;
+    order: 1;
+  }
+  .logo {
+    order: 2;
+  }
+  .account {
+    order: 3;
+    gap: 10px;
+  }
+  .nav {
+    display: none;
+  }
+  .shoping_cart {
+    order: 4;
+    .shoping_cart__aditional {
+      display: none;
+    }
+  }
+
+  .shoping_cart__mini {
+    display: block;
+    background-color: rgb(215, 110, 110);
+    width: 14px;
+    height: 15px;
+    text-align: center;
+    color: white;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    word-wrap: break-word;
+    position: relative;
+    left: -10px;
+  }
+
+  .header.open {
+    .nav {
+      position: absolute;
+      display: flex;
+      background-color: inherit;
+      z-index: 100;
+      min-height: 100vh;
+      min-width: 100%;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      margin-top: 100px;
+      background-color: #000;
+      transition: all 0.9s linear;
+    }
+    .pages {
+      flex-direction: column;
+      margin: 20px;
+      font-size: 24px;
+      transition: all 0.9s linear;
+    }
+  }
+}
+
+@media (max-width: 670px) {
+  .header {
+    gap: 10px;
+  }
+}

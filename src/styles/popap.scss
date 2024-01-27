@@ -1,0 +1,101 @@
+.popap {
+  position: fixed;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  overflow: hidden;
+}
+
+.popap.active {
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  margin: 0px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(41, 41, 41, 0.6);
+  overflow: scroll;
+  z-index: 25;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  & .popap__wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 18px;
+    & .popap__text {
+      margin: 0;
+    }
+  }
+}
+
+.popap__block {
+  position: relative;
+  margin: 52px;
+  max-width: 900px;
+  max-height: 500px;
+}
+
+@media (max-width: 968px) {
+  .popap__block {
+    max-width: 630px;
+    max-height: 350px;
+  }
+}
+@media (max-width: 520px) {
+  .popap__block {
+    margin: 40px;
+  }
+}
+
+button.popap__x {
+  position: absolute;
+  top: -42px;
+  right: -42px;
+  z-index: 28;
+  transition: all 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 50%;
+  & span {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 520px) {
+  button.popap__x {
+    right: -30px;
+  }
+}
+
+.popap__content {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  gap: 9px;
+  background-color: #fafafa;
+  overflow: hidden;
+  border-radius: 9px;
+  box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+  font-size: 17px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: #000000;
+  padding: 20px;
+  min-height: 100px;
+  max-width: 60vw;
+}
+@media (max-width: 968px) {
+  .popap__content {
+    font-size: 13px;
+    gap: 0px;
+    padding: 10px;
+  }
+}

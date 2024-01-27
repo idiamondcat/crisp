@@ -1,0 +1,285 @@
+.main_welcome {
+  background:
+    linear-gradient(
+      174deg,
+      rgba(255, 255, 255, 0.6) 35.42%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    url("assets/img/main_bg.png") no-repeat top left / 100% 100%,
+    lightgray 50% / cover no-repeat;
+}
+
+.main_welcome__box {
+  display: flex;
+  margin: 45px auto;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+  @media (max-width: 650px) {
+    flex-wrap: wrap;
+  }
+}
+
+.welcome_col_1 {
+  flex: 0 0 40%;
+  align-items: center;
+  justify-self: center;
+  @media (max-width: 650px) {
+    order: 2;
+  }
+  & .button-main {
+    padding-left: 21px;
+    margin: 0 auto;
+    &:hover {
+      cursor: pointer;
+      background-color: rgba(240, 240, 240, 10%);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      transform: scale(1.05);
+    }
+  }
+}
+
+.welcome_col_2 {
+  display: flex;
+  flex: 1 0 60%;
+  display: flex;
+  align-items: center;
+  margin: 20px;
+}
+
+.welcome_dress {
+  flex: 1 1 50%;
+  padding: 1px;
+  img {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  &:first-child {
+    transform: scale(0.9);
+  }
+  &:last-child {
+    transform: scale(1);
+    margin-left: -10%;
+  }
+}
+
+.main__title {
+  font-size: 86px;
+  font-weight: 600;
+  line-height: 111%;
+  text-transform: uppercase;
+  max-width: 504px;
+  position: relative;
+  border-top: $color1 solid 2px;
+  border-right: $color1 solid 2px;
+  padding: 21px;
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  @media (max-width: 1350px) {
+    font-size: 65px;
+  }
+  @media (max-width: 1070px) {
+    font-size: 55px;
+  }
+  @media (max-width: 900px) {
+    font-size: 45px;
+  }
+  @media (max-width: 700px) {
+    font-size: 35px;
+  }
+  margin: 15px;
+}
+
+.main_brands {
+  position: relative;
+  h2 {
+    font-family: "Oswald", sans-serif;
+    font-size: 20px;
+    position: absolute;
+    top: -25px;
+    left: 5%;
+    background-color: white;
+    padding: 0px 30px;
+    width: 110px;
+    &::after {
+      content: "";
+      width: 50%;
+    }
+  }
+}
+
+.main_brands__list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  border: solid 2px #c4c4c4;
+
+  li .brands__img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    opacity: 0.8;
+  }
+  li svg {
+    max-width: 100%;
+    width: 139px;
+  }
+  .prada img {
+    width: 139px;
+    height: 141px;
+  }
+}
+
+.main_discount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 29px;
+  & .main_discount-item {
+    width: 49.23%;
+    display: flex;
+    &.main_discount-item--newuser {
+      background: linear-gradient(
+        270deg,
+        rgba(241, 239, 240, 0) 0%,
+        #f1f0f0 10.79%,
+        #f3f0ef 98.67%
+      );
+    }
+    &.main_discount-item--dresses {
+      background: linear-gradient(
+        90deg,
+        #f7e0d5 0%,
+        #f3dcd2 83.85%,
+        rgba(243, 220, 210, 0.14) 100%
+      );
+    }
+  }
+  & .main_discount-img {
+    height: 434px;
+    &.main_discount-img--newuser {
+      width: 48.48%;
+      background-image: url("assets/img/main_box2_1.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+    &.main_discount-img--dresses {
+      width: 60.28%;
+      background-image: url("assets/img/main_box2_2.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+  }
+  & .main_discount-description {
+    box-sizing: border-box;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    &.main_discount-description--newuser {
+      width: 58.98%;
+      justify-content: center;
+    }
+    &.main_discount-description--dresses {
+      width: 48.48%;
+      justify-content: flex-end;
+    }
+  }
+
+  & .main_discount-title {
+    margin-bottom: 7px;
+    font: {
+      family: "Oswald", Arial, sans-serif;
+      size: 48px;
+      weight: 600;
+    }
+    line-height: 62px;
+    text-transform: uppercase;
+    color: #000;
+  }
+  & .main_discount-text {
+    margin: 0;
+    margin-bottom: 50px;
+    font: {
+      family: "Roboto-Regular", Arial, sans-serif;
+      size: 22px;
+      weight: 400;
+    }
+    letter-spacing: 0.22px;
+    line-height: 37px;
+  }
+  & .main_discount-btn {
+    box-sizing: border-box;
+    padding: 16px 28px;
+    background-color: transparent;
+    border: 2px solid #000;
+    font: {
+      family: "Oswald", Arial, sans-serif;
+      size: 18px;
+      weight: 500;
+    }
+    text-transform: uppercase;
+    transition: all 0.3s ease-in;
+    &:hover {
+      cursor: pointer;
+      background-color: #000;
+      color: #ffffff;
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  .main_discount {
+    flex-direction: column;
+    column-gap: 16px;
+    & .main_discount-item {
+      &.main_discount-item--newuser {
+        width: 100%;
+      }
+      &.main_discount-item--dresses {
+        width: 100%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 613px) {
+  .main_discount {
+    flex-direction: column;
+    row-gap: 16px;
+    & .main_discount-item {
+      flex-direction: column;
+      &.main_discount-item--dresses {
+        background: linear-gradient(
+          90deg,
+          #f7e0d5 0%,
+          #f6ded4 50%,
+          #e4cdc5 83.85%,
+          #e4cdc5 100%
+        );
+      }
+    }
+    & .main_discount-description {
+      justify-content: center;
+      &.main_discount-description--newuser {
+        width: 100%;
+      }
+      &.main_discount-description--dresses {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+    & .main_discount-img {
+      &.main_discount-img--dresses {
+        width: 100%;
+        align-self: flex-end;
+      }
+      &.main_discount-img--newuser {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,133 @@
+.about-us {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Oswald", Arial, sans-serif;
+  background-color: #f7f7f7;
+
+  .about-us__header {
+    background-color: hsl(0, 0%, 20%);
+    padding: 20px 0;
+
+    h1 {
+      margin: 0;
+      color: #fff;
+      text-align: center;
+      font-size: 48px;
+      font-weight: 400;
+    }
+  }
+
+  .team {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+  }
+
+  .team-member__block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .team-member {
+      flex-basis: calc(32% - 20px);
+      text-align: center;
+      transition: transform 0.3s ease;
+      overflow: hidden;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      img {
+        width: 300px;
+        border-radius: 50%; /* Make images circular */
+        @media (max-width: 870px) {
+          width: 190px;
+        }
+      }
+
+      .member-details {
+        h3 {
+          margin: 10px 0;
+          font-size: 1.2rem;
+        }
+
+        p {
+          font-size: 1rem;
+          color: #555;
+        }
+
+        a {
+          display: block;
+          color: #333;
+          text-decoration: none;
+          margin-top: 10px;
+
+          &:hover {
+            color: #eb5757; /* Change text color to red on hover */
+            text-decoration: underline #eb5757;
+            transition: 0.5s;
+          }
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        flex-basis: calc(100% - 20px);
+      }
+    }
+  }
+
+  .about-us__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    .contributions,
+    .collaboration {
+      width: calc(48% - 15px);
+      display: inline-block;
+      vertical-align: top;
+      box-sizing: border-box;
+      @media (max-width: 1270px) {
+        width: 45%;
+      }
+      @media (max-width: 820px) {
+        width: 100%;
+      }
+      h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+      }
+      ul {
+        list-style-type: disc;
+        margin-left: 20px;
+        li {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.8rem;
+    text-align: center;
+    .about-us__rslogo {
+      & img {
+        width: 150px;
+      }
+    }
+  }
+}

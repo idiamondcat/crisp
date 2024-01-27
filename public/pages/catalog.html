@@ -1,0 +1,172 @@
+<section class="catalog">
+  <div class="catalog__container">
+    <aside class="catalog__aside">
+      <div class="aside__block">
+        <div class="aside__brends">
+          <h2 class="aside__header" id="asideBrends">Brands</h2>
+          <div class="aside__block">
+            <label class="form__checkbox-label" for="prada__checkbox">
+              <input class="form__checkbox" id="prada__checkbox" type="checkbox">
+              <span class="form__checkbox-indicator"></span>
+              Prada
+            </label>
+          </div>
+          <div class="aside__block">
+            <label class="form__checkbox-label" for="dior__checkbox">
+              <input class="form__checkbox" id="dior__checkbox" type="checkbox">
+              <span class="form__checkbox-indicator"></span>
+              Dior
+            </label>
+          </div>
+          <div class="aside__block">
+            <label class="form__checkbox-label" for="chanel__checkbox">
+              <input class="form__checkbox" id="chanel__checkbox" type="checkbox">
+              <span class="form__checkbox-indicator"></span>
+              Chanel
+            </label>
+          </div>
+          <div class="aside__block">
+            <label class="form__checkbox-label" for="fendi__checkbox">
+              <input class="form__checkbox" id="fendi__checkbox" type="checkbox">
+              <span class="form__checkbox-indicator"></span>
+              Fendi
+            </label>
+          </div>
+          <div class="aside__block">
+            <label class="form__checkbox-label" for="gucci__checkbox">
+              <input class="form__checkbox" id="gucci__checkbox" type="checkbox">
+              <span class="form__checkbox-indicator"></span>
+              Gucci
+            </label>
+          </div>
+          <div class="aside__block">
+            <label class="form__checkbox-label" for="versace__checkbox">
+              <input class="form__checkbox" id="versace__checkbox" type="checkbox">
+              <span class="form__checkbox-indicator"></span>
+              Versace
+            </label>
+          </div>
+        </div>
+        <div class="aside__color">
+          <h2 class="aside__header">Color</h2>
+          <ul class="aside__color-list">
+            <li class="aside__color-item">
+              <label class="form__checkbox-label form__checkbox-label--color label__yellow" for="yellow__checkbox">
+                <input class="form__checkbox" id="yellow__checkbox" type="checkbox">
+                <span class="form__checkbox-indicator">
+                  <span class="form__checkbox-indicator-color"></span>
+                </span>
+              </label>
+            </li>
+            <li class="aside__color-item">
+              <label class="form__checkbox-label form__checkbox-label--color label__blue" for="blue__checkbox">
+                <input class="form__checkbox" id="blue__checkbox" type="checkbox">
+                <span class="form__checkbox-indicator">
+                  <span class="form__checkbox-indicator-color"></span>
+                </span>
+              </label>
+            </li>
+            <li class="aside__color-item">
+              <label class="form__checkbox-label form__checkbox-label--color label__red" for="red__checkbox">
+                <input class="form__checkbox" id="red__checkbox" type="checkbox">
+                <span class="form__checkbox-indicator">
+                  <span class="form__checkbox-indicator-color"></span>
+                </span>
+              </label>
+            </li>
+            <li class="aside__color-item">
+              <label class="form__checkbox-label form__checkbox-label--color label__black" for="black__checkbox">
+                <input class="form__checkbox" id="black__checkbox" type="checkbox">
+                <span class="form__checkbox-indicator">
+                  <span class="form__checkbox-indicator-color"></span>
+                </span>
+              </label>
+            </li>
+          </ul>
+        </div>
+        <div class="aside__size">
+          <h2 class="aside__header">Size</h2>
+          <div class="aside__block">
+            <label class="form__checkbox-label" for="small__checkbox">
+              <input class="form__checkbox" id="small__checkbox" type="checkbox">
+              <span class="form__checkbox-indicator"></span>
+              Small
+            </label>
+          </div>
+          <div class="aside__block">
+            <label class="form__checkbox-label" for="medium__checkbox">
+              <input class="form__checkbox" id="medium__checkbox" type="checkbox">
+              <span class="form__checkbox-indicator"></span>
+              Medium
+            </label>
+          </div>
+          <div class="aside__block">
+            <label class="form__checkbox-label" for="large__checkbox">
+              <input class="form__checkbox" id="large__checkbox" type="checkbox">
+              <span class="form__checkbox-indicator"></span>
+              Large
+            </label>
+          </div>
+        </div>
+        <div class="aside_price">
+          <h2 class="aside__header">Price</h2>
+          <div class="aside__block">
+            <label class="form__checkbox-label" for="cheap__checkbox">
+              <input class="form__checkbox" id="cheap__checkbox" type="checkbox">
+              <span class="form__checkbox-indicator"></span>
+              0$ - 99$
+            </label>
+          </div>
+          <div class="aside__block">
+            <label class="form__checkbox-label" for="mediumPrice__checkbox">
+              <input class="form__checkbox" id="mediumPrice__checkbox" type="checkbox">
+              <span class="form__checkbox-indicator"></span>
+              100$ - 299$
+            </label>
+          </div>
+          <div class="aside__block">
+            <label class="form__checkbox-label" for="expencive__checkbox">
+              <input class="form__checkbox" id="expencive__checkbox" type="checkbox">
+              <span class="form__checkbox-indicator"></span>
+              300$ - 1000$
+            </label>
+          </div>
+        </div>
+        <button class="aside__filterBtn btn" id="filterBtn">FILTER</button>
+        <button class="aside__resetBtn btn" id="resetBtn">RESET</button>
+
+      </div>
+    </aside>
+    <div class="catalog__content">
+      <div class="catalog__sorting">
+        <label for="sort-select">Sort by:</label>
+        <select id="sort-select">
+          <option value="price-asc">Price (Low to High)</option>
+          <option value="price-desc">Price (High to Low)</option>
+          <option value="name-asc">Name (A to Z)</option>
+          <option value="name-desc">Name (Z to A)</option>
+        </select>
+      </div>
+      <div class="search-bar">
+        <input type="text" id="search" placeholder="search...">
+        <button id="search-button">search</button>
+      </div>
+      <nav class="catalog__catigories">
+        <ul class="catalog__breadcrumbs topmenu">
+          <li class="catalog__breadcrumbs-item">
+            <a href="#" class="catalog__breadcrumbs-link">Category Navigation <?xml version="1.0" ?><svg viewBox="0 0 32 32" width="10px" xmlns="http://www.w3.org/2000/svg"><title/><g data-name="Layer 2" id="Layer_2"><path d="M1,16A15,15,0,1,1,16,31,15,15,0,0,1,1,16Zm28,0A13,13,0,1,0,16,29,13,13,0,0,0,29,16Z"/><path d="M12.13,21.59,17.71,16l-5.58-5.59a1,1,0,0,1,0-1.41h0a1,1,0,0,1,1.41,0l6.36,6.36a.91.91,0,0,1,0,1.28L13.54,23a1,1,0,0,1-1.41,0h0A1,1,0,0,1,12.13,21.59Z"/></g></svg> <span id="categoryPath" class="your-styles-here"></span></a>
+          </li>
+        </ul>
+      </nav>
+      <div class="catalog__products"></div>
+      <div class="catalog__pagination">
+        <div class="catalog__buttons">
+          <button class="catalog__button catalog__button_inactive" id="prev">&lt;</button>
+          <button class="catalog__button catalog__button_actual" id="number-page">1</button>
+          <button class="catalog__button catalog__button_active" id="next">&gt;</button>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,31 @@
+<section class="profile">
+    <div class="container profile__container">
+        <ul class="breadcrumbs profile__breadcrumbs">
+            <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="/">Main</a>
+            </li>
+            <li class="breadcrumbs__item breadcrumbs__item--active">Personal information</li>
+        </ul>
+        <h1 class="title profile__title">Personal information</h1>
+        <div class="border-wrapper profile__border-wrapper">
+            <aside class="profile__menu">
+                <nav class="profile__nav">
+                    <ul role="tablist" class="profile__list">
+                        <li role="presentation" class="profile__item">
+                            <a role="tab" href="#personal" id="tab1" class="profile__link profile__link--active" aria-selected="true">Personal information</a>
+                        </li>
+                        <li role="presentation" class="profile__item">
+                            <a role="tab" href="#account" id="tab2" class="profile__link" tabindex="-1">Account information</a>
+                        </li>
+                        <li role="presentation" class="profile__item">
+                            <a role="tab" href="#adresses" id="tab3" class="profile__link" tabindex="-1">Address book</a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+            <div class="profile__data" id="personal" role="tabpanel" aria-labelledby="tab1"></div>
+            <div class="profile__data" id="account" role="tabpanel" aria-labelledby="tab2" hidden></div>
+            <div class="profile__data" id="addresses" role="tabpanel" aria-labelledby="tab3" hidden></div>
+        </div>
+    </div>
+</section>
