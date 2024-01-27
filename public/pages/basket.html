@@ -1,0 +1,59 @@
+<section class="cart">
+  <div class="container cart__container">
+    <ul class="breadcrumbs cart__breadcrumbs">
+        <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="/">Main</a>
+        </li>
+        <li class="breadcrumbs__item breadcrumbs__item--active">Shopping Cart</li>
+    </ul>
+    <h1 class="title cart__title">Shopping Cart</h1>
+    <div class="cart__wrapper">
+      <div class="cart__table-block">
+        <div class="cart__table">
+          <div class="cart__table-head">
+            <div class="cart__table-product-col">Product</div>
+            <div class="cart__table-price-col">Price</div>
+            <div class="cart__table-size-col">Size</div>
+            <div class="cart__table-quantity-col">Quantity</div>
+            <div class="cart__table-total-col">Total</div>
+            <div class="cart__table-btns-col"></div>
+          </div>
+          <div class="cart__table-body"></div>
+        </div>
+        <div class="cart__btns-wrapper">
+          <a href="/catalog" class="grey-btn cart__continue-btn">Continue Shopping</a>
+          <button class="grey-btn cart__clear-cart-btn">Clear Shopping Cart</button>
+        </div>
+      </div>
+      <div class="cart__options-block">
+        <div class="cart__option cart__option--apply-code">
+          <h2 class="subtitle cart__option-subtitle">Apply Discount Code</h2>
+          <label for="discount_code" class="cart__code-field-wrapper">
+            <input id="discount_code" type="text" class="cart__code-field" placeholder="Enter discount code">
+            <button class="cart__apply-code-btn">Apply Discount</button>
+          </label>
+          <div class="cart__codes-list"></div>
+        </div>
+        <div class="cart__option cart__total">
+          <p class="cart__subtotal">
+            <span class="cart__subtotal-text">Subtotal</span>
+            <span class="cart__subtotal-price">
+              <span class="cart__subtotal-num"></span>
+              <span class="cart__subtotal-currency"></span>
+            </span>
+          </p>
+          <p class="cart__total-order">
+            <span class="subtitle cart__total-text">Order Total</span>
+            <span class="subtitle cart__total-price"></span>
+          </p>
+          <button class="btn cart__checkout-btn">Proceed to checkout</button>
+        </div>
+      </div>
+    </div>
+    <div class="cart__empty-cart cart__empty-cart--hidden">
+      <h2 class="cart__empty-cart-title">Cart is empty</h2>
+      <p class="cart__empty-cart-text">Add something from our catalog</p>
+      <a href="/catalog" class="grey-btn cart__start-btn">Start Shopping</a>
+    </div>
+  </div>
+</section>

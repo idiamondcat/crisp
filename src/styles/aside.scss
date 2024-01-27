@@ -1,0 +1,91 @@
+.aside {
+  height: 100vh;
+  width: 400px;
+  padding: 45px 30px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.14);
+  box-sizing: border-box;
+  opacity: 1;
+  transform: translateX(0%);
+  transition: all 1s ease-in-out;
+  &.aside--hidden {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  & .aside__close-btn-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 31px;
+  }
+  & .aside__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-y: scroll;
+  }
+  & .form {
+    width: 100%;
+    & .form__wrapper {
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 8px;
+    }
+    & .form__section {
+      width: 100%;
+      margin-bottom: 24px;
+    }
+    & .form__input-wrapper {
+      width: 100%;
+    }
+  }
+  & .aside__nav {
+    width: 100%;
+    margin-bottom: 32px;
+  }
+  & .aside__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+  }
+  & .aside__item {
+    width: 50%;
+  }
+  & .aside__link {
+    display: block;
+    width: 100%;
+    padding: 11px 13px;
+    box-sizing: border-box;
+    font: {
+      family: "Oswald", Arial, sans-serif;
+      size: 14px;
+      weight: 400;
+    }
+    text-align: center;
+    color: #000000;
+    &.aside__link--active {
+      background-color: #f0f2f2;
+      font: {
+        family: "Oswald-Medium", Arial, sans-serif;
+        size: 14px;
+        weight: 600;
+      }
+    }
+  }
+  & .aside__panel {
+    width: 100%;
+    overflow-y: scroll;
+  }
+  & .aside__btn {
+    width: 140px;
+  }
+}

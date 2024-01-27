@@ -1,0 +1,46 @@
+.login {
+  padding: 13px 0 59px 0;
+  & .login__container {
+    max-width: 1454px;
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  & .login__title {
+    margin-bottom: 24px;
+  }
+  & .login__border-wrapper {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #c4c4c4;
+    padding: 103px 10px 124px 10px;
+  }
+  & .login__form {
+    max-width: 443px;
+    @media (max-width: 445px) {
+      max-width: 100%;
+    }
+  }
+  & .login__btn {
+    width: 100%;
+    margin-bottom: 15px;
+    max-width: 70vw;
+  }
+  & .login__create-acc-btn {
+    display: block;
+    max-width: 70vw;
+    text-decoration: underline;
+    color: #828282;
+    &:hover {
+      cursor: pointer;
+      color: #000000;
+    }
+  }
+}

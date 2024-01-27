@@ -1,0 +1,30 @@
+<section class="login container">
+  <div class="login__container">
+    <h1 class="title login__title">Log In</h1>
+    <div class="login__border-wrapper">
+      <form class="form login__form">
+        <p class="form__wrapper">
+          <span class="form__input-wrapper">
+            <input class="form__field" id="login-email" type="email" name="email" placeholder="daisy.watson@example.com" required>
+            <span class="form__message" aria-live="polite"></span>
+          </span>
+        </p>
+        <p class="form__wrapper">
+          <span class="form__input-wrapper password">
+            <input class="form__field password__input" id="login-password" name="password" type="password" required>
+            <span class="form__message form__message--empty" aria-live="polite">Password Strength: No Password</span>
+            <span class="password__btn"><img src="../assets/icons/211739_eye_icon.svg" alt="eye"></span>
+          </span>
+        </p>
+        <p class="form__checkbox-wrapper">
+          <label class="form__checkbox-label" name="agree" for="agree">
+              <input class="form__checkbox" id="agree" type="checkbox">
+              <span class="form__checkbox-indicator"></span>
+          By using this form you agree with the storage and handling of your data by this website.</label>
+        </p>
+        <button class="btn login__btn" type="submit">sign in</button>
+        <a href="/createaccount" class="login__create-acc-btn">create an account</a>
+      </form>
+    </div>
+  </div>
+</section>

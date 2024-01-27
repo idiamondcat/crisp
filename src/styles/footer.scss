@@ -1,0 +1,136 @@
+.footer {
+  background-color: $color1;
+  color: white;
+  min-width: 100%;
+  margin: 0 auto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.advantages {
+  background-color: $color2;
+  color: black;
+  min-width: 100%;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+}
+.advantages__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  @media (max-width: 700px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.advantages__item {
+  vertical-align: middle;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  &::before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    background: url("assets/icons/check.svg") no-repeat top left / 100% 100%;
+  }
+}
+
+.footer_general {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 10px;
+  row-gap: 10px;
+  column-gap: 5px;
+  padding-top: 65px;
+  padding-bottom: 120px;
+  .logo {
+    order: 0;
+  }
+  @media (max-width: 480px) {
+    align-items: center;
+  }
+}
+
+.footer_general__item {
+  @media (max-width: 700px) {
+    flex: 0 1 40%;
+  }
+  @media (max-width: 480px) {
+    flex: 0 1 100%;
+  }
+}
+
+.footer_nav__item {
+  color: $color2;
+  &:hover {
+    border-bottom: $color5 solid 2px;
+  }
+}
+
+.footer_general__title {
+  color: #fff;
+  font-family: "Oswald-Medium", Arial, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.footer_general__list {
+  list-style: none;
+  padding: 0;
+  color: $color3;
+  font-family: "Roboto-Regular", Arial, sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 207%;
+}
+
+.follow_us__item {
+  display: flex;
+  &:not(:last-child) {
+    margin-bottom: 26px;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.follow_us__link {
+  display: flex;
+  align-items: center;
+  column-gap: 18px;
+  color: $color2;
+}
+.follow_us__img-wrapper {
+  display: inline-flex;
+}
+
+.contact__item {
+  margin-bottom: 1em;
+  line-height: 107%;
+
+  & span:first-child {
+    color: $color2;
+    display: block;
+    font-family: "Oswald-Medium", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  a {
+    color: inherit;
+  }
+}

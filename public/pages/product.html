@@ -1,0 +1,69 @@
+<section class="product_page container">
+  <ul class="breadcrumbs product_page__breadcrumbs">
+    <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link" href="/">Main</a>
+    </li>
+    <li class="breadcrumbs__item">
+      <a class="breadcrumbs__link" href="/catalog">catalog</a>
+    </li>
+    <li class="breadcrumbs__item breadcrumbs__item--active">product</li>
+  </ul>
+
+  <div class="product_page__wrapper">
+
+    <div class="product_page__imgs product_description_img">
+      <div class="swiper product_page__swiper-main">
+        <div class="swiper-wrapper product_page__slider product_page__slider-main"></div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-scrollbar"></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="product_page__brand"><span class="value">Fendi</span></div>
+      <h1 class="product_page__name">Women Black Checked Fit and Flare Dress</h1>
+      <div class="product_page__color">
+        <div class="product_item__title">Color:</div>
+        <div class="product_item__value"></div>
+      </div>
+      <div class="product_page__sizes">
+        <div class="product_page__title">Sizes:</div>
+        <ul class="product_page__items sizes"></ul>
+      </div>
+      <div class="product_page__control_wrap">
+        <div class="product_page__quantity">
+          <div class="product_page__title">Quantity:</div>
+          <div class="product_quantity">
+            <div class="load_ico">
+              <svg  style="enable-background:new 0 0 128 128;" version="1.1" viewBox="0 0 128 128" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M96.1,103.6c-10.4,8.4-23.5,12.4-36.8,11.1c-10.5-1-20.3-5.1-28.2-11.8H44v-8H18v26h8v-11.9c9.1,7.7,20.4,12.5,32.6,13.6   c1.9,0.2,3.7,0.3,5.5,0.3c13.5,0,26.5-4.6,37-13.2c19.1-15.4,26.6-40.5,19.1-63.9l-7.6,2.4C119,68.6,112.6,90.3,96.1,103.6z"/><path d="M103,19.7c-21.2-18.7-53.5-20-76.1-1.6C7.9,33.5,0.4,58.4,7.7,81.7l7.6-2.4C9,59.2,15.5,37.6,31.9,24.4   C51.6,8.4,79.7,9.6,98,26H85v8h26V8h-8V19.7z"/></g>
+              </svg>
+            </div>
+            <button class="product_quantity__minus" type="button" onclick="this.nextElementSibling.stepDown();">-</button>
+            <input type="number" class="product_quantity__num " value="0" min="0" readonly>
+            <button class="product_quantity__plus" type="button" onclick="this.previousElementSibling.stepUp();">+</button>
+          </div>
+        </div>
+        <div class="product_page__prise">
+          <div class="product_page__title">Price:</div>
+          <ul class="product_page__items sizes">
+            <li class="sizes__item product_page__prise sale"></li>
+            <li class="sizes__item product_page__sale_prise"></li>
+          </ul>
+        </div>
+      </div>
+      <button class="btn product_page__btn bag"></button>
+    </div>
+
+    <div class="product_description__addition">
+      <div class="product_description__title">Details</div>
+      <div class="product_description__value">
+        <div class="product_deail__description"> Cool off this summer in the Mini Ruffle Smocked Tank Top from our very own LA Hearts. This tank features a smocked body, adjustable straps, scoop neckline, ruffled hems, and a cropped fit.</div>
+        <div  class="product_detail__sku">
+          <span class="sku_title">Sku:</span><span class="sku_value">kkd8282828474e7</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

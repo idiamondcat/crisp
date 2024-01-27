@@ -1,0 +1,31 @@
+<svg class="sigh_in" width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    svg.sigh_in .out {
+      display: none;
+    }
+    svg.sigh_in .in {
+      display: block;
+    }
+    svg.sigh_out .in {
+      display: none;
+    }
+    svg.sigh_out .out {
+      display: block;
+    }
+  </style>
+  <g clip-path="url(#clip0_3_6)">
+    <path d="M174 86L216 128L174 170" stroke="white" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M104 128H216" stroke="white" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" />
+    <path
+      d="M173 39.9999H229C231.122 39.9999 233.157 40.8428 234.657 42.3431C236.157 43.8433 237 45.8782 237 47.9999V208C237 210.122 236.157 212.156 234.657 213.657C233.157 215.157 231.122 216 229 216H173"
+      stroke="white" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" class="in"/>
+    <path
+      d="M104 216H48C45.8783 216 43.8434 215.157 42.3431 213.657C40.8429 212.157 40 210.122 40 208V48C40 45.8783 40.8429 43.8434 42.3431 42.3431C43.8434 40.8429 45.8783 40 48 40H104"
+      stroke="white" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" class="out"/>
+  </g>
+  <defs>
+    <clipPath id="clip0_3_6">
+      <rect width="256" height="256" fill="white" />
+    </clipPath>
+  </defs>
+</svg>

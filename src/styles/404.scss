@@ -1,0 +1,21 @@
+.not_found_box {
+  margin: 50px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  h1 {
+    font-weight: 700;
+  }
+  p {
+    font-size: 22px;
+  }
+  a {
+    color: white;
+  }
+}
+
+.not_found_ico {
+  width: 30%;
+}

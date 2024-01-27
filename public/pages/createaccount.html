@@ -1,0 +1,187 @@
+<section class="registration">
+  <div class="container registration__container">
+    <ul class="breadcrumbs registration__breadcrumbs">
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link" href="/">Main</a>
+      </li>
+      <li class="breadcrumbs__item breadcrumbs__item--active">Create New Customer Account</li>
+    </ul>
+    <h1 class="title registration__title">Create New Customer Account</h1>
+    <div class="border-wrapper registration__border-wrapper">
+        <form class="form registration__form">
+            <fieldset class="form__section registration__form-section">
+                <legend class="form__subtitle">Personal information</legend>
+                <p class="form__wrapper">
+                    <label class="form__label" for="name">First name <span class="form__asterisk">*</span></label>
+                    <span class="form__input-wrapper">
+                        <input class="form__field" id="name" name="firstName" type="text" data-type="names" required>
+                        <span class="form__message" aria-live="polite"></span>
+                    </span>
+                </p>
+                <p class="form__wrapper">
+                    <label class="form__label" for="last-name">Last name <span class="form__asterisk">*</span></label>
+                    <span class="form__input-wrapper">
+                        <input class="form__field" id="last-name" name="lastName" type="text" data-type="names" required>
+                        <span class="form__message" aria-live="polite"></span>
+                    </span>
+                </p>
+                <p class="form__wrapper">
+                  <label class="form__label" for="birthdate">Date of Birth <span class="form__asterisk">*</span></label>
+                  <span class="form__input-wrapper">
+                    <input class="form__field" id="birthdate" name="dateOfBirth" type="date" required>
+                    <span class="form__message" aria-live="polite"></span>
+                  </span>
+                </p>
+            </fieldset>
+            <fieldset class="form__section registration__form-section">
+                <legend class="form__subtitle">Address</legend>
+                <fieldset class="form__section registration__form-section">
+                  <legend class="form__subtitle form__subtitle--second-level">Shipping Address</legend>
+                  <p class="form__wrapper">
+                    <label class="form__label" for="shipping_country">Country <span class="form__asterisk">*</span></label>
+                    <span class="form__input-wrapper">
+                    <select class="form__field valid" id="shipping_country" name="shippingCountryCode" required>
+                      <option value="" disabled>Choose your country:</option>
+                      <option value="BY" selected>Belarus (BY)</option>
+                      <option value="DE">Germany (DE)</option>
+                      <option value="PL">Poland (PL)</option>
+                      <option value="GE">Georgia (GE)</option>
+                    </select>
+                    <span class="form__message" aria-live="polite"></span>
+                    </span>
+                  </p>
+                  <p class="form__wrapper">
+                    <label class="form__label" for="shipping_street">Street <span class="form__asterisk">*</span></label>
+                    <span class="form__input-wrapper">
+                      <input class="form__field" id="shipping_street" type="text" name="shippingStreetName" placeholder="Street" data-type="street" required>
+                      <span class="form__message" aria-live="polite"></span>
+                    </span>
+                  </p>
+                  <p class="form__wrapper">
+                    <label class="form__label" for="shipping_building">Building</label>
+                    <span class="form__input-wrapper">
+                      <input class="form__field" id="shipping_building" type="text" name="shippingBuilding" placeholder="Building">
+                      <span class="form__message" aria-live="polite"></span>
+                    </span>
+                  </p>
+                  <p class="form__wrapper">
+                      <label class="form__label" for="shipping_apartment">Apartment / Suite</span></label>
+                      <span class="form__input-wrapper">
+                        <input class="form__field" id="shipping_apartment" type="text" name="shippingApartment" placeholder="Apartment / Suite">
+                        <span class="form__message" aria-live="polite"></span>
+                      </span>
+                  </p>
+                  <p class="form__wrapper">
+                    <label class="form__label" for="shipping_city">City <span class="form__asterisk">*</span></label>
+                    <span class="form__input-wrapper">
+                      <input class="form__field" id="shipping_city" type="text" name="shippingCity" placeholder="City" data-type="city" required>
+                      <span class="form__message" aria-live="polite"></span>
+                    </span>
+                  </p>
+                  <p class="form__wrapper">
+                      <label class="form__label" for="shipping_postal_code">Postal Code <span class="form__asterisk">*</span></label>
+                      <span class="form__input-wrapper">
+                        <input class="form__field" id="shipping_postal_code" type="text" name="shippingPostalCode" placeholder="Postal Code" data-type="code" required>
+                        <span class="form__message" aria-live="polite"></span>
+                      </span>
+                  </p>
+                  <p class="form__checkbox-wrapper">
+                    <label class="form__checkbox-label" for="default_shipping_checkbox" name="default_shipping">
+                      <input class="form__checkbox" id="default_shipping_checkbox" name="shippingDefaultCheckbox" type="checkbox">
+                      <span class="form__checkbox-indicator"></span>
+                    Use as Default Shipping Address</label>
+                  </p>
+                  <p class="form__checkbox-wrapper">
+                    <label class="form__checkbox-label" for="billing_address_checkbox" name="choose_as_billing_address">
+                      <input class="form__checkbox" id="billing_address_checkbox" type="checkbox">
+                      <span class="form__checkbox-indicator"></span>
+                    Also Use as Billing Address</label>
+                  </p>
+                </fieldset>
+                <fieldset class="form__section registration__form-section">
+                  <legend class="form__subtitle form__subtitle--second-level">Billing Address</legend>
+                  <p class="form__wrapper">
+                    <label class="form__label" for="billing_country">Country <span class="form__asterisk">*</span></label>
+                    <span class="form__input-wrapper">
+                    <select class="form__field valid" id="billing_country" name="billingCountryCode" required>
+                      <option value="" disabled>Choose your country:</option>
+                      <option value="BY" selected>Belarus (BY)</option>
+                      <option value="DE">Germany (DE)</option>
+                      <option value="PL">Poland (PL)</option>
+                      <option value="GE">Georgia (GE)</option>
+                    </select>
+                    <span class="form__message" aria-live="polite"></span>
+                  </span>
+                </p>
+                  <p class="form__wrapper">
+                    <label class="form__label" for="billing_street">Street <span class="form__asterisk">*</span></label>
+                    <span class="form__input-wrapper">
+                      <input class="form__field" id="billing_street" type="text" name="billingStreetName" placeholder="Street" data-type="street" required>
+                      <span class="form__message" aria-live="polite"></span>
+                    </span>
+                  </p>
+                  <p class="form__wrapper">
+                    <label class="form__label" for="billing_building">Building</label>
+                    <span class="form__input-wrapper">
+                      <input class="form__field" id="billing_building" name="billingBuilding" type="text" placeholder="Building">
+                      <span class="form__message" aria-live="polite"></span>
+                    </span>
+                  </p>
+                  <p class="form__wrapper">
+                      <label class="form__label" for="billing_apartment">Apartment / Suite</span></label>
+                      <span class="form__input-wrapper">
+                        <input class="form__field" id="billing_apartment" type="text" name="billingApartment" placeholder="Apartment / Suite">
+                        <span class="form__message" aria-live="polite"></span>
+                      </span>
+                  </p>
+                  <p class="form__wrapper">
+                    <label class="form__label" for="billing_city">City <span class="form__asterisk">*</span></label>
+                    <span class="form__input-wrapper">
+                      <input class="form__field" id="billing_city" type="text" name="billingCity" placeholder="City" data-type="city" required>
+                      <span class="form__message" aria-live="polite"></span>
+                    </span>
+                  </p>
+                  <p class="form__wrapper">
+                      <label class="form__label" for="billing_postal_code">Postal Code <span class="form__asterisk">*</span></label>
+                      <span class="form__input-wrapper">
+                        <input class="form__field" id="billing_postal_code" type="text" name="billingPostalCode" placeholder="Postal Code" data-type="code" required>
+                        <span class="form__message" aria-live="polite"></span>
+                      </span>
+                  </p>
+                  <p class="form__checkbox-wrapper">
+                    <label class="form__checkbox-label" for="default_billing_checkbox" name="default_shipping">
+                      <input class="form__checkbox" id="default_billing_checkbox" name="billingDefaultCheckbox" type="checkbox">
+                      <span class="form__checkbox-indicator"></span>
+                      Use as Default Billing Address</label>
+                  </p>
+                </fieldset>
+            </fieldset>
+            <fieldset class="form__section registration__form-section">
+                <legend class="form__subtitle">Additional Information</legend>
+                <p class="form__wrapper">
+                    <label class="form__label" for="email">Email <span class="form__asterisk">*</span></label>
+                    <span class="form__input-wrapper">
+                        <input class="form__field" id="email" type="email" name="email" placeholder="daisy.watson@example.com" required>
+                        <span class="form__message" aria-live="polite"></span>
+                    </span>
+                </p>
+                <p class="form__wrapper">
+                    <label class="form__label" for="password">Password <span class="form__asterisk">*</span></label>
+                    <span class="form__input-wrapper password">
+                        <input class="form__field password__input" id="password" name="password" type="password" required>
+                        <span class="form__message form__message--empty" aria-live="polite">Password Strength: No Password</span>
+                        <span class="password__btn"><img src="../assets/icons/211739_eye_icon.svg" alt="eye"></span>
+                    </span>
+                </p>
+            </fieldset>
+            <p class="form__wrapper form__wrapper--btns-wrapper">
+              <span class="form__btn-wrapper">
+                <button class="btn registration__btn" id="sendCreatingAccount" type="submit">create an account</button>
+                <a href="/login" class="form__sign-in-link">Do you already have an account? Sign In</a>
+              </span>
+              <a class="back-link form__back-link">back</a>
+            </p>
+        </form>
+    </div>
+  </div>
+</section>
